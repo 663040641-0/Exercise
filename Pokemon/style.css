@@ -1,0 +1,65 @@
+* {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    background-color: #87CEEB;
+}
+header {
+
+}
+header img {
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    position: sticky;
+    top: 1rem;
+}
+
+
+.pokemon-grid {
+    display: grid;
+    background-color: white;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.card {
+    background-color: #FBFCB8;
+    border-radius: 30px;
+}
+.card h2 {
+    text-align: center;
+}
+
+.card img {
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: auto;
+    padding: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
