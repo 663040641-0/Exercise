@@ -1,0 +1,91 @@
+:root {
+    --bg-colour: #87CEEB;
+    --card-colour: #FBFCB8;
+    --focus-card-colour: #a3fc9d;
+    --text-colour: #008080;
+    --black-colour: #000000;
+    --white-colour: #FFFFFF;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-colour: #1c1c1c;
+        --card-colour: #361501;
+        --text-colour: #abffff;
+        --black-colour: #FFFF;
+        --white-colour: #000000;
+        --focus-card-colour: #0e2e0c    ;
+    }
+
+}
+
+body{
+    background-color: var(--bg-colour);
+    color: var(--text-colour);
+}
+header {
+
+}
+header img {
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--white-colour);
+    border-radius: 20px;
+    font-size: 1.5rem;
+    position: sticky;
+    top: 1rem;
+}
+
+
+.pokemon-grid {
+    display: grid;
+    background-color: var(--white-colour);
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.card {
+    background-color: var(--card-colour);
+    border-radius: 30px;
+}
+.card h2 {
+    text-align: center;
+}
+
+.card img {
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: auto;
+    padding: 10px;
+}
+
+.card:focus {
+    outline: 2px solid var(--black-colour);
+    outline-offset: 2px;
+    background-color: var(--focus-card-colour);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
