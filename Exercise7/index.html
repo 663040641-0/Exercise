@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--nav bar-->
+    <header>
+      <div class="bg-neon-blue-500 flex items-center justify-between text-white p-15">
+        <div>
+          <h1 class="font-bold text-3xl hover:cursor-pointer ms-5">Deliveright</h1>
+        </div>
+        <div>
+          <button class="text-xl font-bold hover:cursor-pointer mx-5 hidden md:inline">Home</button>
+          <button class="text-xl font-bold hover:cursor-pointer mx-5 hidden md:inline">About us</button>
+          <button class="text-xl font-bold hover:cursor-pointer mx-5 hidden md:inline">Services</button>
+          <button class="text-xl font-bold hover:cursor-pointer mx-5 hidden md:inline">Blog</button>
+          <button class="text-xl font-bold hover:cursor-pointer mx-5 hidden md:inline">Contact us</button>
+          <button class="text-xl font-bold mx-5 px-7 py-3 bg-amber-500 rounded-3xl hover:cursor-pointer hover:bg-amber-600 hidden md:inline">Login</button>
+          <button class="text-7xl hover:cursor-pointer  inline md:hidden">=</button>
+        </div>
+      </div>
+    </header>
+    <main>
+    <!--Get your food...-->
+      <div class="bg-neon-blue-500 flex flex-col md:flex-row justify-between text-white p-15">
+        <div class="w-150">
+        <p class="text-5xl/15 font-bold text-white ms-5 w-105">Get your food Delivery at your  Doorstep</p>
+        <p class="ms-5 w-105 m-10">you can get scooter hourly and monthly plus yearly basis We have many scoober nearby your location</p>
+        <div class="flex items-center justify-start ">
+          <button class="text-xl font-bold ms-5 px-7 py-3  bg-amber-500 rounded-4xl hover:cursor-pointer hover:bg-amber-600 hidden md:inline">Order Now</button>
+          <button class="text-xl font-bold px-7 py-3 ms-5  rounded-4xl hover:cursor-pointer hover:bg-blue-800 border-b-white border-2 hidden md:inline">Track your order</button>
+        </div>
+        </div>
+        <div>
+            <img src="./images/delivery.png" alt="delivery guy delivery item to customer w-50 h-full md:w-full" class="w-full h-auto" />
+        </div>
+      </div>
+      <!--Button when on small screen-->
+      <div class="flex flex-col items-stretch flex-wrap">
+        <button class="text-xl font-bold my-5 px-7 py-3  bg-amber-500 rounded-4xl hover:cursor-pointer hover:bg-amber-600 inline md:hidden">Order Now</button>
+        <button class="text-xl font-bold px-7 py-3  rounded-4xl hover:cursor-pointer hover:bg-gray-500 border-b-white border-2 inline md:hidden">Track your order</button>
+      </div>
+    </main>
+    <footer>
+    <!--Why we are...-->
+      <div class="flex flex-row justify-between m-20 me-50">
+        <div class="w-full md:w-50">
+          <h2 class="text-5xl md:text-3xl font-bold mt-10 mb-10 ">Why we are best in our town</h2>
+          <p class="text-2xl md:text-xl mt-5">
+            We have 5000+ Reviews and our Customer trust on our food and Delivery services.You can read more about our company.
+          </p>
+          <button class="text-4xl font-bold mt-10 ms-3 p-2 text-white bg-amber-500 rounded-4xl hover:cursor-pointer hover:bg-amber-600 hidden md:block">-></button>
+        </div>
+        <div class="w-60 h-100 p-10 rounded-2xl flex-col justify-center shadow-xl hidden md:flex">
+            <img src="./images/food.png" alt="food with smile">
+          <h2 class="font-bold text-2xl mt-10">Choose Your favorite Food</h2>
+        </div>
+        <div class="w-60 h-100 p-10 rounded-2xl flex-col justify-center shadow-xl hidden md:flex">
+            <img src="./images/delivery-guy.png" alt="delivery guy delivering item" />
+          <h2 class="font-bold text-2xl mt-10">Get delivery At your door step</h2>
+        </div>
+        <div class="w-60 h-100 p-10 rounded-2xl flex-col justify-center shadow-xl hidden md:flex">
+            <img src="./images/phone.jpg" alt="hand holding phone">
+          <h2 class="font-bold text-2xl mt-10">We have 5000+ Review On our app</h2>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
