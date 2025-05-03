@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+    --color-neon-blue-500: #4D4DFF;
+}
