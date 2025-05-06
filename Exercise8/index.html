@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-amber-950 text-5xl font-extrabold">Calculator</h1>
+    </header>
+    <main class="text-black dark:text-white bg-white dark:bg-gray-700 py-10">
+      <!--number display-->
+      <div class="w-full h-60 flex justify-end items-center border-2 border-black p-5">
+        <label for="display"></label><input id="display" class="w-full h-full text-4xl font-bold" readonly>
+      </div>
+      <!--calculator panel-->
+      <div class="grid grid-cols-4 grid-rows-5 gap-2 m-4">
+        <div class="flex justify-center items-center  border-2 border-black bg-gray-400">
+          <button onclick="clearDisplay()" id="clear" class="text-3xl font-bold w-full">C</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black bg-gray-400">
+          <button id="inverse" class="text-3xl font-bold w-full">+/-</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black bg-gray-400">
+          <button id="percentage" class="text-3xl font-bold w-full">%</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black bg-amber-500">
+          <button onclick="displayText('/')" id="divisor" class="text-3xl font-bold w-full">/</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black">
+          <button onclick="displayText('7')" id="seven" class="text-3xl font-bold w-full">7</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black">
+          <button onclick="displayText('8')" id="eight" class="text-3xl font-bold w-full">8</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black">
+          <button onclick="displayText('9')" id="nine" class="text-3xl font-bold w-full">9</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black bg-amber-500">
+          <button onclick="displayText('*')" id="multiplier" class="text-3xl font-bold w-full">X</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black">
+          <button onclick="displayText('4')" id="four" class="text-3xl font-bold k w-full">4</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black">
+          <button onclick="displayText('5')" id="five" class="text-3xl font-bold w-full">5</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black">
+          <button onclick="displayText('6')" id="six" class="text-3xl font-bold w-full">6</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black bg-amber-500">
+          <button onclick="displayText('-')" id="minus" class="text-3xl font-bold w-full">-</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black">
+          <button onclick="displayText('1')" id="one" class="text-3xl font-bold w-full">1</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black">
+          <button onclick="displayText('2')" id="two" class="text-3xl font-bold w-full">2</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black">
+          <button onclick="displayText('3')" id="three" class="text-3xl font-bold w-full">3</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black bg-amber-500">
+          <button onclick="displayText('+')" id="plus" class="text-3xl font-bold w-full">+</button>
+        </div>
+        <div></div>
+        <div class="flex justify-center items-center  border-2 border-black">
+          <button onclick="displayText('0')" id="zero" class="text-3xl font-bold w-full" >0</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black">
+          <button onclick="displayText('.')" id="dot" class="text-3xl font-bold w-full">.</button>
+        </div>
+        <div class="flex justify-center items-center  border-2 border-black bg-amber-500">
+          <button onclick="calculator()" id="answer" class="text-3xl font-bold w-full">=</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
