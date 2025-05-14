@@ -1,0 +1,92 @@
+<header class="flex justify-center items-center p-10 m-10">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1024px-International_Pok%C3%A9mon_logo.svg.png" width="500" height="auto">
+  <h1>Click on Pokemon Name to check pokemon information</h1>
+</header>
+<div id="pokemon-card-container" class="grid grid-cols-4 gap-8 px-4 font-family">
+  <div class="card type-electric" >
+    <div class="card-title">
+      <h1><a routerLink="pikachu">Pikachu</a></h1>
+      <h1>#025</h1>
+      <div >
+        <h2 class="card-type">electric</h2>
+      </div>
+    </div>
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png" alt="yellow rat wit pink cheek" width="60%" height="60%" />
+  </div>
+  <div class="card type-grass">
+    <div class="card-title">
+      <h1><a routerLink="bulbasaur">Bulbasaur</a></h1>
+      <h1>#001</h1>
+      <div >
+        <h2 class="card-type">grass</h2>
+        <h2 class="card-type">poison</h2>
+      </div>
+    </div>
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="green dog with lotus on back" width="60%" height="60%" />
+  </div>
+  <div class="card type-fire">
+    <div class="card-title">
+      <h1><a routerLink="charizard">Charizard</a></h1>
+      <h1>#006</h1>
+      <div >
+        <h2 class="card-type">fire</h2>
+        <h2 class="card-type">flying</h2>
+      </div>
+    </div>
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" alt="Big orange dragon" width="60%" height="60%" />
+  </div>
+  <div class="card type-fire">
+    <div class="card-title">
+      <h1><a routerLink="charmander">charmander</a></h1>
+      <h1>#004</h1>
+      <div >
+        <h2 class="card-type">fire</h2>
+      </div>
+    </div>
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="cute smol orange dragon" width="60%" height="60%" />
+  </div>
+  <div class="card type-fire">
+    <div class="card-title">
+      <h1><a routerLink="charmeleon">Charmeleon</a></h1>
+      <h1>#005</h1>
+      <div >
+        <h2 class="card-type">fire</h2>
+      </div>
+    </div>
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png" alt="mini orange dragon" width="60%" height="60%" />
+  </div>
+  <div class="card type-grass">
+    <div class="card-title">
+      <h1><a routerLink="ivysaur">Ivysaur</a></h1>
+      <h1>#002</h1>
+      <div >
+        <h2 class="card-type">grass</h2>
+        <h2 class="card-type">poison</h2>
+      </div>
+    </div>
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="green dog with bigger lotus on back" width="60%" height="60%" />
+  </div>
+  <div class="card type-normal">
+    <div class="card-title">
+      <h1><a routerLink="pidgeot">Pidgeot</a></h1>
+      <h1>#018</h1>
+      <div >
+        <h2 class="card-type">normal</h2>
+        <h2 class="card-type">flying</h2>
+      </div>
+    </div>
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png" alt="Cool bird" width="60%" height="60%" />
+  </div>
+  <div class="card type-grass">
+    <div class="card-title">
+      <h1><a routerLink="venusaur">Venusaur</a></h1>
+      <h1>#003</h1>
+      <div >
+        <h2 class="card-type">grass</h2>
+        <h2 class="card-type">poison</h2>
+      </div>
+    </div>
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" alt="big dog that have big lotus on top of the back" width="60%" height="60%" />
+  </div>
+</div>
+<router-outlet/>
