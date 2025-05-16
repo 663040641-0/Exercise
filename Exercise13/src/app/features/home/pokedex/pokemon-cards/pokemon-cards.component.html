@@ -1,0 +1,8 @@
+<ul>
+@for (pokemon of pokemonDetails(); track pokemon.name) {
+  <li>{{ pokemon.name }}</li>
+  <li>{{ pokemon.id }}</li>
+  <p>{{ getTypeNames(pokemon) }}</p>
+  <img src="{{ pokemon.sprites.front_default }}" alt="pokemon images">
+}
+</ul>
