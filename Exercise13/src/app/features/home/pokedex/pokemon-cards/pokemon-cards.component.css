@@ -1,0 +1,4 @@
+@import "tailwindcss";
+.button-gen {
+  @apply mx-5
+}
