@@ -1,8 +1,8 @@
 import {Component, inject, signal} from '@angular/core';
 import {PokemonService} from '../../../../shared/services/pokemon/pokemon.service';
 import {ApiResponse, Pokemon, ResourceList} from '../../../../shared/models/pokemon/pokemon.model';
-import {HttpClient, httpResource} from '@angular/common/http';
 import {JsonPipe} from '@angular/common';
+import {GetSetService} from '../../../../shared/services/getSet/get-set.service';
 
 @Component({
   selector: 'app-pokemon-cards',
@@ -14,18 +14,31 @@ import {JsonPipe} from '@angular/common';
 })
 export class PokemonCardsComponent {
   #pokemonService = inject(PokemonService);
+  getSet = inject(GetSetService);
   pokemonLists = signal<ResourceList[]>([]);
   pokemonDetails = signal<Pokemon[]>([]);
-  limit = signal<number>(20);
-  offset = signal<number>(0);
+
+  loading = signal<boolean>(false);
   id = signal<number>(1);
   name = signal<string>("");
 
-  pokemonResource = httpResource<ApiResponse<ResourceList>>(
-    () => `https://pokeapi.co/api/v2/pokemon/${this.name()}`
-  )
+  // pokemonResource = httpResource<ApiResponse<ResourceList>>(
+  //   () => `https://pokeapi.co/api/v2/pokemon/${this.name()}`
+  // )
 
-  loadPokemonList(limit: number, offset: number) {
+  loadGen(limit: number, offset: number) {
+    this.getSet.limit = limit;
+    this.getSet.offset = offset;
+    this.loadPokemonList();
+  }
+
+  loadPokemonList() {
+    this.loading.set(true);
+    this.pokemonLists.set([]);
+    this.pokemonDetails.set([]);
+    const limit = this.getSet.limit;
+    const offset = this.getSet.offset;
+
     this.#pokemonService.getPokemonByOffsetLimit(limit, offset).subscribe(pokemon => {
       this.pokemonLists.set(pokemon.results)
       this.loadPokemonDetailsFromList(pokemon.results);
@@ -33,13 +46,24 @@ export class PokemonCardsComponent {
   }
 
   ngOnInit() {
-    this.loadPokemonList(20,0);
+    this.loading.set(true);
+    this.loadGen(151,0);
   }
 
   loadPokemonDetailsFromList(list: ResourceList[]) {
+    let loaded = 0;
+    const total = list.length;
+    const tempList: Pokemon[] = [];
+
     list.forEach(items => {
       this.#pokemonService.getPokemonByName(items.name).subscribe(pokemon => {
-        this.pokemonDetails.set(this.pokemonDetails().concat(pokemon));//concat use for extend arrays
+        tempList.push(pokemon);//concat use for extend arrays
+        loaded++
+        if (loaded >= total) {
+          tempList.sort((a, b) => a.id - b.id);
+          this.pokemonDetails.set(tempList);
+          this.loading.set(false)
+        }
       });
     });
   }

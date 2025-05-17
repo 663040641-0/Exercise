@@ -1,8 +1,25 @@
-<ul>
-@for (pokemon of pokemonDetails(); track pokemon.name) {
-  <li>{{ pokemon.name }}</li>
-  <li>{{ pokemon.id }}</li>
-  <p>{{ getTypeNames(pokemon) }}</p>
-  <img src="{{ pokemon.sprites.front_default }}" alt="pokemon images">
+<div class="gen-button-contaier flex justify-around my-5">
+  <button class="button-gen" (click)="loadGen(151,0)">gen I</button>
+  <button class="button-gen" (click)="loadGen(100,151)">gen II</button>
+  <button class="button-gen" (click)="loadGen(135,251)">gen III</button>
+  <button class="button-gen" (click)="loadGen(107,386)">gen IV</button>
+  <button class="button-gen" (click)="loadGen(156,493)">gen V</button>
+  <button class="button-gen" (click)="loadGen(72,649)">gen VI</button>
+  <button class="button-gen" (click)="loadGen(88,721)">gen VII</button>
+  <button class="button-gen" (click)="loadGen(96,809)">gen VIII</button>
+  <button class="button-gen" (click)="loadGen(120,905)">gen IX</button>
+</div>
+@if (this.loading()) {
+   <p>Loading...</p>
+} @else {
+<div class="grid grid-cols-4">
+  @for (pokemon of pokemonDetails(); track pokemon.name) {
+    <div class="flex flex-col justify-center items-center">
+      <h1>{{ pokemon.name }}</h1>
+      <h2>{{ pokemon.id }}</h2>
+      <h2>{{ getTypeNames(pokemon) }}</h2>
+      <img src="{{ pokemon.sprites.front_default }}" alt="pokemon images">
+    </div>
+  }
+</div>
 }
-</ul>
